@@ -1,0 +1,26 @@
+{
+  "visual": {
+    "name": "excelSpreadsheet",
+    "displayName": "Excel Spreadsheet Pro",
+    "guid": "excelSpreadsheetPro01",
+    "visualClassName": "Visual",
+    "version": "1.0.0.0",
+    "description": "Full-featured Excel-like spreadsheet with formulas, formatting, charts, and Power BI data binding.",
+    "supportUrl": "https://github.com",
+    "gitHubUrl": "https://github.com"
+  },
+  "apiVersion": "5.9.0",
+  "author": {
+    "name": "Custom Visual",
+    "email": "dev@example.com"
+  },
+  "assets": {
+    "icon": "assets/icon.png"
+  },
+  "externalJS": null,
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json",
+  "dependencies": null,
+  "stringResources": [],
+  "version": "1.0.0.0"
+}

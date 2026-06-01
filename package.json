@@ -1,0 +1,22 @@
+{
+  "name": "powerbi-excel-visual",
+  "version": "1.0.0.0",
+  "description": "Excel-like interactive spreadsheet custom visual for Power BI",
+  "scripts": {
+    "build": "pbiviz package",
+    "start": "pbiviz start",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "hyperformula": "^2.7.1",
+    "powerbi-visuals-api": "~5.9.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "powerbi-visuals-tools": "^5.4.0",
+    "typescript": "~5.3.3"
+  }
+}

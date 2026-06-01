@@ -1,0 +1,89 @@
+{
+  "privileges": [],
+  "dataRoles": [
+    {
+      "displayName": "Category",
+      "name": "category",
+      "kind": "Grouping"
+    },
+    {
+      "displayName": "Values",
+      "name": "values",
+      "kind": "Measure"
+    }
+  ],
+  "dataViewMappings": [
+    {
+      "categorical": {
+        "categories": {
+          "for": { "in": "category" },
+          "dataReductionAlgorithm": { "top": { "count": 10000 } }
+        },
+        "values": {
+          "select": [{ "bind": { "to": "values" } }]
+        }
+      }
+    },
+    {
+      "table": {
+        "rows": {
+          "for": { "in": "values" }
+        }
+      },
+      "conditions": [
+        { "values": { "max": 1 }, "category": { "max": 0 } }
+      ]
+    }
+  ],
+  "objects": {
+    "theme": {
+      "displayName": "Theme",
+      "properties": {
+        "mode": {
+          "displayName": "Color mode",
+          "type": {
+            "enumeration": [
+              { "displayName": "Light", "value": "light" },
+              { "displayName": "Dark", "value": "dark" },
+              { "displayName": "Auto (report)", "value": "auto" }
+            ]
+          }
+        },
+        "accentColor": {
+          "displayName": "Accent color",
+          "type": { "fill": { "solid": { "color": true } } }
+        }
+      }
+    },
+    "grid": {
+      "displayName": "Grid",
+      "properties": {
+        "defaultRowCount": {
+          "displayName": "Default rows",
+          "type": { "numeric": true }
+        },
+        "defaultColCount": {
+          "displayName": "Default columns",
+          "type": { "numeric": true }
+        },
+        "showGridLines": {
+          "displayName": "Show grid lines",
+          "type": { "bool": true }
+        }
+      }
+    },
+    "ribbon": {
+      "displayName": "Ribbon",
+      "properties": {
+        "showRibbon": {
+          "displayName": "Show ribbon toolbar",
+          "type": { "bool": true }
+        }
+      }
+    }
+  },
+  "supportsHighlight": true,
+  "sorting": {
+    "custom": {}
+  }
+}
